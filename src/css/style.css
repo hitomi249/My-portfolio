@@ -53,3 +53,28 @@ span {
     display: none;
   }
 }
+
+/* ---------- layout ------------- */
+.l_container-sm,
+.l_container,
+.l_container-lg {
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.l_container-sm {
+    max-width: calc(var(--content-width-sm) + 32px);
+}
+
+.l_container {
+    max-width: calc(var(--content-width) + 32px);
+}
+
+.l_container-lg {
+    max-width: calc(var(--content-width-lg) + 32px);
+}
+
+.l_contents {
+    padding: 120px 0;
+}
