@@ -35,9 +35,12 @@
     <!-- <meta name="twitter:image:src" content="URL" /> -->
     <!-- TODO:Twitter専用の設定でwitterでシェアされた時に表示したい画像URLを設定 -->
     <!-- google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jacques+Francois+Shadow&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+      rel="stylesheet"
+    />
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link
@@ -58,21 +61,110 @@
       </h1>
       <nav class="l_header_nav">
         <ul class="l_header_nav_list">
-            <li class="l_header_nav_item">
-                <a href="#" class="l_header_nav_link"></a>
-            </li>
-            <li class="l_header_nav_item">
-                <a href="#about" class="l_header_nav_link"></a>
-            </li>
-            <li class="l_header_nav_item">
-                <a href="#skill" class="l_header_nav_link"></a>
-            </li>
-            <li class="l_header_nav_item">
-                <a href="#works" class="l_header_nav_link"></a>
-            </li>
+          <li class="l_header_nav_item">
+            <a href="#" class="l_header_nav_link"></a>
+          </li>
+          <li class="l_header_nav_item">
+            <a href="#about" class="l_header_nav_link"></a>
+          </li>
+          <li class="l_header_nav_item">
+            <a href="#skill" class="l_header_nav_link"></a>
+          </li>
+          <li class="l_header_nav_item">
+            <a href="#works" class="l_header_nav_link"></a>
+          </li>
         </ul>
       </nav>
+      <button class="m_hambarger">
+        <span class="m_hambarger-bar"></span>
+        <span class="m_hambarger-bar"></span>
+        <span class="m_hambarger-bar"></span>
+      </button>
     </header>
-    .
+    <div class="top_kv">
+      <p class="top_kv_ttl">MY<br class="u_lg_dn" />PORTFOLIO</p>
+    </div>
+    <div class="top_kv_slidshow js_slideshow">
+      <div class="top_kv_slidshow_slide swiper-slide">
+        <img
+          src=""
+          alt=""
+          width=""
+          height=""
+          class="top_kv_slidshow_slide_img"
+        />
+      </div>
+      <div class="top_kv_slidshow_slide swiper-slide">
+        <img
+          src=""
+          alt=""
+          width=""
+          height=""
+          class="top_kv_slidshow_slide_img"
+        />
+      </div>
+    </div>
+    <main class="l_main">
+      <section class="m_section" id="about">
+        <div class="m_section_ttl">
+          <h2 class="m_section_ttl_main">about</h2>
+          <p class="m_section_ttl_sub">わたしについて</p>
+        </div>
+        <div class="about_profile">
+          <div class="about_profile_img_wrapper">
+            <img src="" alt="私の写真" class="about_section_img" />
+          </div>
+          <div class="about_profile_introduction">
+            <h3 class="m_about_profile_title">自己紹介</h3>
+            <table class="about_profile_table">
+              <tr class="about_profile_tr">
+                <th class="about_profile_th">名前</th>
+                <td class="about_profile_td">樋渡 ひとみ</td>
+              </tr>
+              <tr class="about_profile_tr">
+                <th class="about_profile_th">出身</th>
+                <td class="about_profile_td">鹿児島県(在住)</td>
+              </tr>
+              <tr class="about_profile_tr">
+                <th class="about_profile_th">生年月日</th>
+                <td class="about_profile_td">1996/01/31</td>
+              </tr>
+              <tr class="about_profile_tr">
+                <th class="about_profile_th">経歴</th>
+                <td class="about_profile_td">
+                  高校卒業後病院で<br />
+                  看護補助者として<br />
+                  10年間勤務
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="about_strength">
+          <h3 class="m_about_profile_title">私の強み</h3>
+          <p class="about_strength_desc">1.集中力</p>
+          <p class="about_strength_txt">
+            物事に取り組む際に高い集中力を発揮します。現職でも各業務に真摯に取り組み、決められた時間内に確実に完了させています。
+            また、予期せぬトラブルや予定変更が発生した際にも迅速に対応し、業務の遂行に集中力を切らさず取り組むことができます。
+          </p>
+          <p class="about_strength_desc">2.チャレンジ精神</p>
+          <p class="about_strength_txt">
+            新しいことに対する興味が湧いた場合、私はとりあえず挑戦することを大切にしています。
+            失敗しても、それを機にやり方を改善したり、手順を見直したり、他者と相談したり、情報を検索したりすることで解決することができることを学びました。
+            Web制作においても、ZeroPlusでの学習を通じて、LPやコーポレートサイトのコーディングを独力で行えるようになりました。
+            さらに、Pythonに興味を持ち、Djangoを用いてECサイトの構築を達成することができました。
+          </p>
+        </div>
+        <div class="about_vision">
+          <h3 class="m_about_profile_title">Vision</h3>
+          <p class="about_vision_txt">
+            チームワークを重視しながら1人1人が目標達成に向けて動けることを大事にしています。
+            病棟勤務でも様々な職業の立場から栄養面、身体面、メンタル面など生活するうえで関わってくる物事に多方面から
+            サポートすることで退院に向けて支援することができることがわかりました。
+            Web制作でも制作したサイトを通してクライアントの事業の一部に携わり、満足いく作品を作るためにもスキルアップを欠かさず新しいことにも挑戦していきたいです。
+          </p>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
