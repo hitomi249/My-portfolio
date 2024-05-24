@@ -59,7 +59,7 @@
       <h1 class="l_header_ttl">
         <a href="#" class="l_header_ttl_link">Hiwatashi Hitomi</a>
       </h1>
-      <nav class="l_header_nav">
+      <nav class="l_header_nav js_navigation">
         <ul class="l_header_nav_list">
           <li class="l_header_nav_item">
             <a href="#" class="l_header_nav_link">top</a>
@@ -75,14 +75,14 @@
           </li>
         </ul>
       </nav>
-      <button class="m_hambarger">
-        <span class="m_hambarger-bar"></span>
-        <span class="m_hambarger-bar"></span>
-        <span class="m_hambarger-bar"></span>
+      <button class="m_hamburger js_hamburger">
+        <span class="m_hamburger-bar js_hamburger-bar"></span>
+        <span class="m_hamburger-bar js_hamburger-bar"></span>
+        <span class="m_hamburger-bar js_hamburger-bar"></span>
       </button>
     </header>
     <div class="top_kv">
-      <p class="top_kv_ttl">MY<br class="u_lg_dn" />PORTFOLIO</p>
+      <p class="top_kv_ttl">my<br class="u_lg_dn" />portfolio</p>
     </div>
     <div class="top_kv_slidshow js_slideshow">
       <div class="top_kv_slidshow_slide swiper-slide">
@@ -106,10 +106,12 @@
     </div>
     <main class="l_main">
       <section class="m_section m_section_about l_contents" id="about">
-        <div class="m_section_ttl">
-          <h2 class="m_section_ttl_main">about</h2>
+        <hgroup class="l_container-lg">
+          <h2 class="m_section_ttl">
+            <span class="m_section_ttl_main">about</span>
+          </h2>
           <p class="m_section_ttl_sub">わたしについて</p>
-        </div>
+        </hgroup>
         <div class="about_profile l_container-sm">
           <div class="about_profile_img_wrapper">
             <img src="img/7439.jpg" alt="私の写真" class="about_section_img" />
@@ -118,19 +120,19 @@
             <h3 class="m_about_profile_title">自己紹介</h3>
             <table class="about_profile_table">
               <tr class="about_profile_tr">
-                <th class="about_profile_th">名前</th>
+                <th class="about_profile_th">名前:</th>
                 <td class="about_profile_td">樋渡 ひとみ</td>
               </tr>
               <tr class="about_profile_tr">
-                <th class="about_profile_th">出身</th>
+                <th class="about_profile_th">出身:</th>
                 <td class="about_profile_td">鹿児島県(在住)</td>
               </tr>
               <tr class="about_profile_tr">
-                <th class="about_profile_th">生年月日</th>
+                <th class="about_profile_th">生年月日:</th>
                 <td class="about_profile_td">1996/01/31</td>
               </tr>
               <tr class="about_profile_tr">
-                <th class="about_profile_th">経歴</th>
+                <th class="about_profile_th">経歴:</th>
                 <td class="about_profile_td">
                   高校卒業後病院で<br />
                   看護補助者として<br />
@@ -140,7 +142,7 @@
             </table>
           </div>
         </div>
-        <div class="about_strength">
+        <div class="about_strength l_container-lg">
           <h3 class="m_about_profile_title">私の強み</h3>
           <p class="about_strength_desc">1.集中力</p>
           <p class="about_strength_txt">
@@ -155,7 +157,7 @@
             さらに、Pythonに興味を持ち、Djangoを用いてECサイトの構築を達成することができました。
           </p>
         </div>
-        <div class="about_vision">
+        <div class="about_vision l_container-lg">
           <h3 class="m_about_profile_title">Vision</h3>
           <p class="about_vision_txt">
             チームワークを重視しながら1人1人が目標達成に向けて動けることを大事にしています。
@@ -166,15 +168,23 @@
         </div>
       </section>
       <section class="m_section m_section_skill l_contents" id="skill">
-        <div class="m_section_ttl">
-          <h2 class="m_section_ttl_main">skill</h2>
+        <hgroup class="l_container-lg">
+          <h2 class="m_section_ttl">
+            <span class="m_section_ttl_main">skill</span>
+          </h2>
           <p class="m_section_ttl_sub">技術・ツール</p>
-        </div>
+        </hgroup>
         <div class="skill_desc">
-          <div class="l_container">
+          <div class="l_container skill_desc_articles">
             <article class="skill_desc_article">
               <div class="skill_desc_img_wrapper">
-                <img src="img/icons8-html-64.png" alt="HTML&CSSのアイコン" width="" height="" class="skill_desc_img" />
+                <img
+                  src="img/icons8-html-64.png"
+                  alt="HTML&CSSのアイコン"
+                  width=""
+                  height=""
+                  class="skill_desc_img"
+                />
               </div>
               <p class="skill_desc_title">HTML&CSS</p>
               <p class="skill_desc_txt">
@@ -185,7 +195,13 @@
             </article>
             <article class="skill_desc_article">
               <div class="skill_desc_img_wrapper">
-                <img src="img/icons8-javascript-50.png" alt="JavaScriptのアイコン" width="" height="" class="skill_desc_img" />
+                <img
+                  src="img/icons8-javascript-50.png"
+                  alt="JavaScriptのアイコン"
+                  width=""
+                  height=""
+                  class="skill_desc_img"
+                />
               </div>
               <p class="skill_desc_title">JavaScript</p>
               <p class="skill_desc_txt">
@@ -196,7 +212,13 @@
             </article>
             <article class="skill_desc_article">
               <div class="skill_desc_img_wrapper">
-                <img src="img/WordPress-logotype-wmark.png" alt="WordPressのアイコン" width="" height="" class="skill_desc_img" />
+                <img
+                  src="img/WordPress-logotype-wmark.png"
+                  alt="WordPressのアイコン"
+                  width=""
+                  height=""
+                  class="skill_desc_img"
+                />
               </div>
               <p class="skill_desc_title">WordPress</p>
               <p class="skill_desc_txt">
@@ -239,19 +261,21 @@
         </div>
       </section>
       <section class="m_section m_section_works l_contents" id="works">
-        <div class="m_section_ttl">
-          <h2 class="m_section_ttl_main">work</h2>
+        <hgroup class="l_container-lg">
+          <h2 class="m_section_ttl">
+            <span class="m_section_ttl_main">works</span>
+          </h2>
           <p class="m_section_ttl_sub">制作物</p>
-        </div>
+        </hgroup>
         <div class="l_container">
           <ul class="works_cards">
             <li class="works_card">
               <div class="works_card_img_wrapper">
-                <img src="" alt="" width="" height="" class="works_card_img" />
+                <img src="img/card1.png" alt="ポートフォリオサイト" width="2880" height="1920" class="works_card_img" />
               </div>
               <p class="works_card_heading">ポートフォリオサイト</p>
-              <p class="works_card_priod">1か月</p>
-              <p class="works_card_pic">デザイン、コーディング</p>
+              <p class="works_card_priod">制作期間 : 1か月</p>
+              <p class="works_card_pic">担当 : デザイン、コーディング</p>
               <p class="works_card_skill">
                 Figma、github、HTML&CSS、JavaScript
               </p>
@@ -262,8 +286,8 @@
                 <img src="" alt="" width="" height="" class="works_card_img" />
               </div>
               <p class="works_card_heading">コーポレートサイト</p>
-              <p class="works_card_priod">1か月</p>
-              <p class="works_card_pic">コーディング</p>
+              <p class="works_card_priod">制作期間 : 1か月</p>
+              <p class="works_card_pic">担当 : コーディング</p>
               <p class="works_card_skill">
                 github、WordPress、HTML&CSS、JavaScript
               </p>
@@ -274,8 +298,8 @@
                 <img src="" alt="" width="" height="" class="works_card_img" />
               </div>
               <p class="works_card_heading">サイト</p>
-              <p class="works_card_priod">1か月</p>
-              <p class="works_card_pic">コーディング</p>
+              <p class="works_card_priod">制作期間 : 1か月</p>
+              <p class="works_card_pic">担当 : コーディング</p>
               <p class="works_card_skill">
                 Python、github、HTML&CSS、JavaScript
               </p>
@@ -301,7 +325,9 @@
             </li>
           </ul>
         </nav>
-        <a href="https://icons8.jp/" class="icon_link">icon by icons8</a>
+        <a href="https://icons8.jp/" class="l_footer_icon_link"
+          >icon by icons8</a
+        >
         <small class="l_footer_copyright">&copy;2024 Hitomi Hiwatashi</small>
       </footer>
     </main>

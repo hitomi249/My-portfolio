@@ -15,7 +15,8 @@
   --z-index-back: -1;
   --z-index-default: 1;
   --z-index-header: 100;
-  --z-index-menu: 200;
+  --z-index-menu: 150;
+  --z-index-modal: 200;
 }
 
 body {
@@ -42,13 +43,11 @@ span {
 
 /* ---------- utility ---------- */
 
-@media screen and (min-width: 375px) {
-  .u_sm-dn {
-    display: none;
-  }
+.u_sm-dn {
+  display: block;
 }
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 768px) {
   .u_lg-dn {
     display: none;
   }
@@ -58,23 +57,410 @@ span {
 .l_container-sm,
 .l_container,
 .l_container-lg {
-    width: 100%;
-    padding: 0 16px;
-    margin: 0 auto;
+  width: 100%;
+  padding: 0 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .l_container-sm {
-    max-width: calc(var(--content-width-sm) + 32px);
+  max-width: calc(var(--content-width-sm) + 32px);
 }
 
 .l_container {
-    max-width: calc(var(--content-width) + 32px);
+  max-width: calc(var(--content-width) + 32px);
 }
 
 .l_container-lg {
-    max-width: calc(var(--content-width-lg) + 32px);
+  max-width: calc(var(--content-width-lg) + 32px);
 }
 
 .l_contents {
-    padding: 120px 0;
+  padding: 120px 0;
+}
+
+.l_header {
+  height: 70px;
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: var(--z-index-header);
+  background: transparent;
+}
+
+.l_header_ttl {
+  font-family: "Jacques Francois Shadow", serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 30px;
+  /* color: var(--white-color); */
+}
+
+.l_header_ttl_link {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.l_header_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white-color);
+  z-index: var(--z-index-modal);
+}
+
+@media screen and (min-width: 786px) {
+  .l_header_nav {
+    position: static;
+    background: transparent;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    pointer-events: inherit;
+  }
+}
+
+.l_header_nav_list {
+  display: flex;
+  gap: 56px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+@media screen and (min-width: 786px) {
+  .l_header_nav_list {
+    height: auto;
+    flex-direction: row;
+  }
+}
+
+.l_header_nav_item {
+  font-family: "Jacques Francois Shadow", serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 24px;
+}
+
+.l_header_nav_link {
+  display: block;
+  height: 100%;
+}
+
+.l_footer {
+  padding: 30px 50px 0;
+  height: 120px;
+  background: var(--accent-color);
+}
+
+.l_footer_nav_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.l_footer_nav_item {
+  text-transform: uppercase;
+  font-family: "Jacques Francois Shadow", serif;
+  width: calc(100vw / 2);
+}
+
+@media screen and (min-width: 786px) {
+  .l_footer_nav_item {
+    width: 100%;
+  }
+}
+
+.l_footer_nav_link {
+  display: block;
+  height: 100%;
+}
+
+.l_footer_icon_link {
+  font-size: 8px;
+}
+
+.l_footer_copyright {
+  font-size: 8px;
+}
+
+/* --------------module---------- */
+.m_hamburger {
+  width: 32px;
+  height: 28px;
+  position: relative;
+  z-index: var(--z-index-modal);
+}
+
+@media screen and (min-width: 786px) {
+  .m_hamburger {
+    display: none;
+  }
+}
+
+.m_hamburger-bar {
+  width: 32px;
+  height: 2px;
+  position: absolute;
+  right: 0;
+  transition: 0.3s;
+  background: var(--black-color);
+}
+
+.m_hamburger-bar:first-child {
+  top: 0;
+}
+
+.m_hambarger-bar:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.m_hambarger-bar:last-child {
+  top: 100%;
+  transform: translateY(-100%);
+}
+
+.m_section_ttl {
+  text-align: center;
+  position: relative;
+}
+
+.m_section_ttl::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #000;
+}
+
+.m_section_ttl_main {
+  font-family: "Jacques Francois Shadow", serif;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1;
+  background: var(--white-color);
+  position: relative;
+}
+
+.m_section_ttl_sub {
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.m_about_profile_title {
+  font-size: 28px;
+  padding-left: 12px;
+  position: relative;
+}
+
+.m_about_profile_title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 30px;
+  background: var(--accent-color);
+}
+
+/* top-page */
+.top_kv {
+  height: 100vh;
+  position: relative;
+}
+
+.top_kv_ttl {
+  font-size: 38px;
+  text-transform: uppercase;
+  font-family: "Jacques Francois Shadow", serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.about_profile {
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 786px) {
+  .about_profile {
+    margin-top: 88px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.about_profile_img_wrapper {
+  margin: 0 auto;
+  width: 238px;
+  height: 284px;
+}
+
+@media screen and (min-width: 786px) {
+  .about_profile_introduction {
+    margin-left: 137px;
+  }
+}
+
+.about_profile_td {
+  padding-left: 8px;
+}
+
+.about_strength {
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 786px) {
+  .about_strength {
+    margin-top: 88px;
+  }
+}
+
+.about_strength_desc {
+  margin-top: 40px;
+  font-weight: bold;
+  font-size: 22px;
+  position: relative;
+  display: inline-block;
+}
+
+.about_strength_desc::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  width: 100%;
+  height: 10px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-3deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-3deg);
+  -ms-transform: translate(-50%, -50%) rotate(-3deg);
+  z-index: var(--z-index-back);
+}
+
+.about_strength_txt {
+  margin-top: 24px;
+}
+
+.about_vision {
+  margin-top: 60px;
+}
+
+@media screen and (min-width: 786px) {
+  .about_vision {
+    margin-top: 88px;
+  }
+}
+
+.about_vision_txt {
+  margin-top: 40px;
+}
+
+.skill_desc {
+  margin-top: 40px;
+}
+
+@media screen and (min-width: 786px) {
+  .skill_desc {
+    margin-top: 80px;
+  }
+}
+
+.skill_desc_article:not(:first-child) {
+  margin-top: 32px;
+}
+
+@media screen and (min-width: 786px) {
+  .skill_desc_article:not(:first-child) {
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 786px) {
+  .skill_desc_articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px 58px;
+  }
+}
+
+.skill_desc_article {
+  width: 100%;
+}
+
+@media screen and (min-width: 786px) {
+  .skill_desc_article {
+    width: calc((100% - 58px * 2) / 3);
+  }
+}
+
+.skill_desc_img_wrapper {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  flex-shrink: 0;
+}
+
+.skill_desc_title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  margin-top: 16px;
+  text-align: center;
+}
+
+.works_card {
+    border: 1px solid var(--gray-color);
+    max-width: 288px;
+}
+
+/* ------------------js--------------- */
+
+.js_hamburger-bar {
+  transition: top 0.24s, transform 0.24s, opacity 0.24s;
+}
+
+.js_navigation {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+@media screen and (min-width: 786px) {
+  .js_navigation {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.js_navigation.is-active {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.js_hamburger.is-active .m_hamburger-bar:first-child {
+  top: 50%;
+  transform: translate(-50%, 0) rotate(45deg);
+}
+
+.js_hamburger.is-active .m_hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+
+.js_hamburger.is-active .m_hamburger-bar:last-child {
+  top: 50%;
+  transform: translate(-50%, 0) rotate(-45deg);
 }
