@@ -76,33 +76,13 @@
         </ul>
       </nav>
       <button class="m_hamburger js_hamburger">
-        <span class="m_hamburger-bar js_hamburger-bar"></span>
-        <span class="m_hamburger-bar js_hamburger-bar"></span>
-        <span class="m_hamburger-bar js_hamburger-bar"></span>
+        <span class="m_hamburger-bar"></span>
+        <span class="m_hamburger-bar"></span>
+        <span class="m_hamburger-bar"></span>
       </button>
     </header>
     <div class="top_kv">
-      <p class="top_kv_ttl">my<br class="u_lg_dn" />portfolio</p>
-    </div>
-    <div class="top_kv_slidshow js_slideshow">
-      <div class="top_kv_slidshow_slide swiper-slide">
-        <img
-          src=""
-          alt=""
-          width=""
-          height=""
-          class="top_kv_slidshow_slide_img"
-        />
-      </div>
-      <div class="top_kv_slidshow_slide swiper-slide">
-        <img
-          src=""
-          alt=""
-          width=""
-          height=""
-          class="top_kv_slidshow_slide_img"
-        />
-      </div>
+      <p class="top_kv_ttl">my <br class="u_lg-dn" />portfolio</p>
     </div>
     <main class="l_main">
       <section class="m_section m_section_about l_contents" id="about">
@@ -260,6 +240,7 @@
           </div>
         </div>
       </section>
+
       <section class="m_section m_section_works l_contents" id="works">
         <hgroup class="l_container-lg">
           <h2 class="m_section_ttl">
@@ -267,45 +248,74 @@
           </h2>
           <p class="m_section_ttl_sub">制作物</p>
         </hgroup>
-        <div class="l_container">
-          <ul class="works_cards">
-            <li class="works_card">
+        <div class="l_container js_swiper">
+          <ul class="works_cards swiper-wrapper">
+            <li class="works_card swiper-slide">
               <div class="works_card_img_wrapper">
-                <img src="img/card1.png" alt="ポートフォリオサイト" width="2880" height="1920" class="works_card_img" />
+                <img
+                  src="img/card1.png"
+                  alt="ポートフォリオサイト"
+                  width="2880"
+                  height="1920"
+                  class="works_card_img"
+                />
               </div>
-              <p class="works_card_heading">ポートフォリオサイト</p>
-              <p class="works_card_priod">制作期間 : 1か月</p>
-              <p class="works_card_pic">担当 : デザイン、コーディング</p>
-              <p class="works_card_skill">
-                Figma、github、HTML&CSS、JavaScript
-              </p>
-              <p class="works_card_Ingenuity"></p>
+              <div class="works_card_inner">
+                <p class="works_card_heading">ポートフォリオサイト</p>
+                <p class="works_card_priod">制作期間 : 1か月</p>
+                <p class="works_card_pic">担当 : デザイン、コーディング</p>
+                <p class="works_card_skill">
+                  使用技術・ツール : Figma、github、HTML&CSS、JavaScript
+                </p>
+                <p class="works_card_Ingenuity">工夫 : シンプルで読みやすいサイトを目指しました</p>
+              </div>
             </li>
-            <li class="works_card">
+            <li class="works_card swiper-slide">
               <div class="works_card_img_wrapper">
-                <img src="" alt="" width="" height="" class="works_card_img" />
+                <img
+                  src="img/card1.png"
+                  alt=""
+                  width=""
+                  height=""
+                  class="works_card_img"
+                />
               </div>
-              <p class="works_card_heading">コーポレートサイト</p>
-              <p class="works_card_priod">制作期間 : 1か月</p>
-              <p class="works_card_pic">担当 : コーディング</p>
-              <p class="works_card_skill">
-                github、WordPress、HTML&CSS、JavaScript
-              </p>
-              <p class="works_card_Ingenuity"></p>
+              <div class="works_card_inner">
+                <p class="works_card_heading">コーポレートサイト</p>
+                <p class="works_card_priod">制作期間 : 1か月</p>
+                <p class="works_card_pic">担当 : コーディング</p>
+                <p class="works_card_skill">
+                  使用技術・ツール : github、WordPress、HTML&CSS、JavaScript
+                </p>
+                <p class="works_card_Ingenuity"></p>
+              </div>
             </li>
-            <li class="works_card">
+            <li class="works_card swiper-slide">
               <div class="works_card_img_wrapper">
-                <img src="" alt="" width="" height="" class="works_card_img" />
+                <img
+                  src="img/card1.png"
+                  alt=""
+                  width=""
+                  height=""
+                  class="works_card_img"
+                />
               </div>
-              <p class="works_card_heading">サイト</p>
-              <p class="works_card_priod">制作期間 : 1か月</p>
-              <p class="works_card_pic">担当 : コーディング</p>
-              <p class="works_card_skill">
-                Python、github、HTML&CSS、JavaScript
-              </p>
-              <p class="works_card_Ingenuity"></p>
+              <div class="works_card_inner">
+                <p class="works_card_heading">サイト</p>
+                <p class="works_card_priod">制作期間 : 1か月</p>
+                <p class="works_card_pic">担当 : コーディング</p>
+                <p class="works_card_skill">
+                  使用技術・ツール : Python、github、HTML&CSS、JavaScript
+                </p>
+                <p class="works_card_Ingenuity"></p>
+              </div>
             </li>
           </ul>
+          <!-- <div class="swiper-controller">
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div> -->
         </div>
       </section>
       <footer class="l_footer">
@@ -325,10 +335,15 @@
             </li>
           </ul>
         </nav>
-        <a href="https://icons8.jp/" class="l_footer_icon_link"
-          >icon by icons8</a
-        >
-        <small class="l_footer_copyright">&copy;2024 Hitomi Hiwatashi</small>
+
+        <p class="l_footer_inner">
+          <a href="https://icons8.jp/" class="l_footer_icon_link"
+            >icon by icons8</a
+          >
+          <small class="l_footer_copyright_txt"
+            >&copy;2024 Hitomi Hiwatashi</small
+          >
+        </p>
       </footer>
     </main>
   </body>
