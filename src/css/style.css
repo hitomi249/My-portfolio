@@ -442,7 +442,7 @@ span {
   margin-top: 60px;
 }
 
-@media screen and (min-width: 687px) {
+@media screen and (min-width: 450px) {
   .works_cards {
     overflow: hidden;
     display: grid;
@@ -463,7 +463,7 @@ span {
   margin-top: 40px;
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 450px) {
   .works_card:not(:first-child) {
     margin-top: 0;
   }
