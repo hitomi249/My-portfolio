@@ -51,7 +51,10 @@
     <!-- js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@7/swiper-bundle.min.js"
+      defer
+    ></script>
     <script src="js/main.js" defer></script>
   </head>
   <body class="js_body">
@@ -267,7 +270,9 @@
                 <p class="works_card_skill">
                   使用技術・ツール : Figma、github、HTML&CSS、JavaScript
                 </p>
-                <p class="works_card_Ingenuity">工夫 : シンプルで読みやすいサイトを目指しました</p>
+                <p class="works_card_Ingenuity">
+                  工夫 : シンプルで読みやすいサイトを目指しました
+                </p>
               </div>
             </li>
             <li class="works_card swiper-slide">
@@ -311,11 +316,11 @@
               </div>
             </li>
           </ul>
-          <!-- <div class="swiper-controller">
-            <div class="swiper-pagination"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div> -->
+          <!-- <div class="swiper-controller"> -->
+            <div class="works_dots swiper-pagination"></div>
+            <div class="works_nav works_nav__prev swiper-button-prev"></div>
+            <div class="works_nav works_nav__next swiper-button-next"></div>
+          <!-- </div> -->
         </div>
       </section>
       <footer class="l_footer">

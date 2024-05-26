@@ -156,6 +156,10 @@ span {
   height: 100%;
 }
 
+.l_main {
+  overflow: hidden;
+}
+
 .l_footer {
   padding: 30px 50px 0;
   background: var(--accent-color);
@@ -444,7 +448,7 @@ span {
 
 @media screen and (min-width: 450px) {
   .works_cards {
-    overflow: hidden;
+    /* overflow: hidden; */
     display: grid;
     gap: 56px;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -521,4 +525,33 @@ span {
 .js_hamburger.is-active .m_hamburger-bar:last-child {
   top: 50%;
   transform: translateY(0) rotate(-45deg);
+}
+
+
+
+
+/* スライダーの高さ指定*/
+.swiper-wrapper {
+  height: 80vw;
+}
+/* 矢印の位置調整 */
+.works_nav {
+  left: 50%;
+  margin: 0;
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.works_nav__prev {
+  top: 0;
+  left: 50%;
+}
+
+.works_nav__next {
+  bottom: 0;
+  top: auto;
+}
+/* スライドのサイズ調整 */
+.swiper-slide {
+  height: auto;
+  width: 100%;
 }

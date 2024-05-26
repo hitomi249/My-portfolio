@@ -26,81 +26,26 @@ navLinks.forEach((navLink) => {
   });
 });
 
-/*スライドショー*/
-// let mySwiper, mySlidesPerView;
-// let isInited = false;
-// const slideLength = document.querySelectorAll(".swiper-slide").length;
 
-// const breakpoints = [
-//   // {
-//   //   breakpoint: 0,
-//   //   slidesPerView: 1,
-//   // },
-//   {
-//     breakpoint: 600,
-//     slidesPerView: 2,
-//   },
-//   {
-//     breakpoint: 980,
-//     slidesPerView: 3,
-//   },
-// ];
-// breakpoints.reverse();
-
-// const checkBreakpoint = () => {
-//   for (let key in breakpoints) {
-//     let bp = breakpoints[key]["breakpoint"];
-//     if (window.matchMedia("(min-width:" + bp + "px)").matches) {
-//       mySlidesPerView = breakpoints[key]["slidesPerView"];
-//       break;
-//     }
-//   }
-
-//   if (slideLength > mySlidesPerView) {
-//     if (!isInited) {
-//       initSwiper();
-//       isInited = true;
-//     }
-//   } else {
-//     if (isInited) {
-//       mySwiper.destroy(false, true);
-//       isInited = false;
-//     }
-//   }
-// };
-
-// const initSwiper = () => {
-//   mySwiper = new Swiper(".js_swiper", {
-//     slidesPerView: 1,
-//     spaceBetween: 16,
-//     loop: true,
-//     loopAdditionalSlides: 1,
-//     speed: 1000,
-//     autoplay: {
-//       delay: 4000,
-//       disableOnInteraction: false,
-//     },
-//     grabCursor: true,
-//     navigation: {
-//       nextEl: ".swiper-button-next",
-//       prevEl: ".swiper-button-prev",
-//     },
-//     breakpoints: {
-//       600: {
-//         slidesPerView: 2,
-//         spaceBetween: 40,
-//       },
-//       980: {
-//         slidesPerView: 3,
-//         spaceBetween: 56,
-//       },
-//     },
-//   });
-// };
-
-// window.addEventListener("resize", function () {
-//   checkBreakpoint();
-// });
-// checkBreakpoint();
-
-
+/*swiper*/ 
+const swiper = new Swiper(".js_swiper", {
+  loop: true, // ループ
+  speed: 1000, // 少しゆっくり(デフォルトは300)
+  mousewheel: true, // マウスホイールでスライド
+  direction: "vertical", // 縦方向
+  autoplay: { // 自動再生
+    delay: 8000, // 1秒後に次のスライド
+    disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
+  },
+  // ページネーション
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  // 前後の矢印
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  
+});
