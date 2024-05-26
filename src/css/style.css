@@ -336,6 +336,10 @@ span {
   }
 }
 
+.about_profile_th {
+  text-align: justify;
+}
+
 .about_profile_td {
   padding-left: 8px;
 }
@@ -461,6 +465,7 @@ span {
   border: 1px solid var(--gray-color);
   border-radius: 5px;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: auto;
 }
 
 .works_card:not(:first-child) {
@@ -525,33 +530,4 @@ span {
 .js_hamburger.is-active .m_hamburger-bar:last-child {
   top: 50%;
   transform: translateY(0) rotate(-45deg);
-}
-
-
-
-
-/* スライダーの高さ指定*/
-.swiper-wrapper {
-  height: 80vw;
-}
-/* 矢印の位置調整 */
-.works_nav {
-  left: 50%;
-  margin: 0;
-  transform: translateX(-50%) rotate(90deg);
-}
-
-.works_nav__prev {
-  top: 0;
-  left: 50%;
-}
-
-.works_nav__next {
-  bottom: 0;
-  top: auto;
-}
-/* スライドのサイズ調整 */
-.swiper-slide {
-  height: auto;
-  width: 100%;
 }
