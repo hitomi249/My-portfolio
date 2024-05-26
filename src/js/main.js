@@ -26,4 +26,18 @@ navLinks.forEach((navLink) => {
   });
 });
 
+//
+const header = document.querySelector(".js_header");
+let prevY = window.scrollY; // 前回のスクロール位置を初期化
 
+window.addEventListener("scroll", () => {
+  const currentY = window.scrollY; // 現在のスクロール位置を取得
+  if (currentY < prevY || currentY <= 0) {
+    // 上にスクロールしている場合またはスクロール位置が0以下の場合（バウンススクロール）
+    header.classList.remove("hidden"); // hiddenクラスを削除して表示する
+  } else {
+    // 下にスクロールしている場合
+    header.classList.add("hidden"); // hiddenクラスを追加して非表示にする
+  }
+  prevY = currentY; // 前回のスクロール位置を更新
+});

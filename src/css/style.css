@@ -91,6 +91,7 @@ span {
   left: 0;
   z-index: var(--z-index-header);
   background: transparent;
+  position: fixed;
 }
 
 .l_header_ttl {
@@ -158,6 +159,7 @@ span {
 
 .l_main {
   overflow: hidden;
+  padding-top: 70px;
 }
 
 .l_footer {
@@ -530,4 +532,8 @@ span {
 .js_hamburger.is-active .m_hamburger-bar:last-child {
   top: 50%;
   transform: translateY(0) rotate(-45deg);
+}
+
+.js_header.hidden {
+  transform: translateY(-70px);
 }
