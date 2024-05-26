@@ -99,7 +99,7 @@ span {
   line-height: 1;
   font-weight: 400;
   font-size: 30px;
-  /* color: var(--white-color); */
+  color: var(--white-color);
 }
 
 .l_header_ttl_link {
@@ -297,6 +297,7 @@ span {
 .top_kv {
   height: 100vh;
   position: relative;
+  background: url(../img/kv.jpg) center / cover;
 }
 
 .top_kv_ttl {
@@ -307,6 +308,12 @@ span {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media screen and (min-width: 786px) {
+  .top_kv_ttl {
+    font-size: 90px;
+  }
 }
 
 .about_profile {
