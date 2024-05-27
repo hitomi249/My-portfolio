@@ -126,6 +126,7 @@ span {
     height: auto;
     opacity: 1;
     pointer-events: inherit;
+    overscroll-behavior-y: contain;
   }
 }
 
