@@ -21,15 +21,16 @@ gsap
     x: 60,
   });
 
-
-  gsap.from(".about_strength_desc::after", {
-    x: 100, // 100px右に移動
-    scrollTrigger: {
-      trigger: ".box", // アニメーション開始のトリガー要素
-      start: "top center", // アニメーション開始位置
+gsap.to(".about_strength_desc", {
+  scrollTrigger: {
+    trigger: ".about_strength_desc", // アニメーション開始のトリガー要素
+    start: "top center", // アニメーション開始位置
+    toggleClass: {
+      targets: ".about_strength_desc", // クラスを切り替える対象の要素
+      className: "is-active", // クラス名 "active" を付け外し
     },
-  });
-
+  },
+});
 
 /*ハンバーガーメニュー*/
 const hamburger = document.querySelector(".js_hamburger");

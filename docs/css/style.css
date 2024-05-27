@@ -19,6 +19,10 @@
   /* --z-index-modal: 200; */
 }
 
+:root {
+  --width-100: 100%;
+}
+
 body {
   color: var(--black-color);
   font-size: 16px;
@@ -376,14 +380,20 @@ span {
   content: "";
   position: absolute;
   background-color: var(--accent-color);
-  width: 100%;
+  width: 0;
   height: 10px;
   bottom: 0;
-  left: 50%;
+  left: 0;
   transform: translate(-50%, -50%) rotate(-3deg);
   -webkit-transform: translate(-50%, -50%) rotate(-3deg);
   -ms-transform: translate(-50%, -50%) rotate(-3deg);
   z-index: var(--z-index-back);
+  transition: all 1.5s;
+}
+
+.about_strength_desc.is-active::after {
+  left: 50%;
+  width: 100%;
 }
 
 .about_strength_txt {
