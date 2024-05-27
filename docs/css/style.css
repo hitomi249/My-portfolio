@@ -376,16 +376,24 @@ span {
   display: inline-block;
 }
 
-.about_strength_desc_maker {
-  padding-bottom: 10px;
-  background-image: linear-gradient(
-    -3deg,
-    transparent 50%,
-    var(--accent-color) 50%,
-    var(--accent-color) calc(50% + 10px),
-    transparent calc(50% + 10px)
-  );
-  background-position-y: 15px;
+.about_strength_desc::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  width: 0;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(-3deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-3deg);
+  -ms-transform: translate(-50%, -50%) rotate(-3deg);
+  z-index: var(--z-index-back);
+  transition: all 1.5s;
+}
+
+.about_strength_desc.is-active::after {
+  left: 50%;
+  width: 100%;
 }
 
 .about_strength_txt {
