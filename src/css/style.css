@@ -504,6 +504,9 @@ span {
   margin-top: 32px;
 }
 /* ------------------js--------------- */
+.js_body.is-active {
+  overflow: hidden;
+}
 
 .js_hamburger-bar {
   transition: 0.24s, transform 0.24s, opacity 0.24s;
