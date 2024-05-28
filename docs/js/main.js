@@ -32,6 +32,21 @@ gsap.to(".about_strength_desc", {
   },
 });
 
+gsap.from(".js_skill", {
+  y: 200,
+  autoAlpha: 0,
+  duration: 1,
+  ease: "Power4.inOut",
+  scrollTrigger: {
+    trigger: ".js_skill_trigger",
+    start: "top center",
+  },
+  stagger: {
+    each: 0.6,
+    from: "start",
+  },
+});
+
 /*ハンバーガーメニュー*/
 const hamburger = document.querySelector(".js_hamburger");
 const navigation = document.querySelector(".js_navigation");
