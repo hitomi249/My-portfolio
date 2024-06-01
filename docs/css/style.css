@@ -271,6 +271,7 @@ span {
   font-family: "Jacques Francois Shadow", serif;
   text-transform: uppercase;
   font-size: 48px;
+  padding-left: 5px;
   line-height: 1;
   background: var(--white-color);
   position: relative;
@@ -452,7 +453,6 @@ span {
 
 @media screen and (min-width: 450px) {
   .works_cards {
-    /* overflow: hidden; */
     display: grid;
     gap: 56px;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -460,7 +460,6 @@ span {
 }
 
 .works_card {
-  /* overflow: visible; */
   width: 288px;
   border: 1px solid var(--gray-color);
   border-radius: 5px;
