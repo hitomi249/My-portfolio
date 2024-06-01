@@ -376,26 +376,6 @@ span {
   display: inline-block;
 }
 
-.about_strength_desc::after {
-  content: "";
-  position: absolute;
-  background-color: var(--accent-color);
-  width: 0;
-  height: 10px;
-  bottom: 0;
-  left: 0;
-  transform: translate(-50%, -50%) rotate(-3deg);
-  -webkit-transform: translate(-50%, -50%) rotate(-3deg);
-  -ms-transform: translate(-50%, -50%) rotate(-3deg);
-  z-index: var(--z-index-back);
-  transition: all 1.5s;
-}
-
-.about_strength_desc.is-active::after {
-  left: 50%;
-  width: 100%;
-}
-
 .about_strength_txt {
   margin-top: 24px;
 }
@@ -557,4 +537,24 @@ span {
 
 .js_header.hidden {
   transform: translateY(-70px);
+}
+
+.js_about_strength_desc::after {
+  content: "";
+  position: absolute;
+  background-color: var(--accent-color);
+  width: 0;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, -50%) rotate(-3deg);
+  -webkit-transform: translate(-50%, -50%) rotate(-3deg);
+  -ms-transform: translate(-50%, -50%) rotate(-3deg);
+  z-index: var(--z-index-back);
+  transition: all 1.5s;
+}
+
+.js_about_strength_desc.is-active::after {
+  left: 50%;
+  width: 100%;
 }
