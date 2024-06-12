@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
   --black-color: #333;
   --white-color: #fff;
@@ -493,7 +495,6 @@ span {
 .works_card_priod {
   margin-top: 32px;
 }
-
 
 /* ------------------js--------------- */
 .js_body.is-active {
